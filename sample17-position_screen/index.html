@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- three.jsを読み込む -->
+    <script src="../lib/three.js-master/build/three.js"></script>
+    <!-- <script src="https://unpkg.com/three@0.137.4/build/three.min.js"></script> -->
+    <!-- index.jsを読み込む -->
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <!-- 親のタグの基準点をリセット -->
+    <div
+      style="position: relative; overflow: hidden; width: 960px; height: 540px"
+    >
+      <!-- Three.js用のcanvasタグ -->
+      <canvas
+        id="myCanvas"
+        style="position: absolute; top: 0; left: 0"
+      ></canvas>
+
+      <!-- ライン描画用のSVG -->
+      <svg width="960" height="540" style="position: absolute; top: 0; left: 0">
+        <g stroke="white">
+          <line id="svgLine" x1="0" y1="0" x2="0" y2="0" stroke-width="3" />
+        </g>
+      </svg>
+
+      <!-- 座標表示用のdivタグ -->
+      <div
+        id="hud"
+        style="position: absolute; top: 0; left: 0; background: white"
+      ></div>
+    </div>
+  </body>
+</html>
